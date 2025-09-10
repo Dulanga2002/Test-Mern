@@ -1,28 +1,33 @@
 import { Grid, Typography, Input, Button } from "@mui/material";
+import { useState } from "react";
 
 const UserForm = (props) => {
+    
+  const [id, setId] = useState(0);
+  const [name, setName] = useState('');
+
   return (
     <Grid
       container
       spacing={2}
       sx={{
         backgroundColor: "#ffffff",
-        marginbottom: "30px",
+        marginBottom: "30px",
         display: "block",
       }}
     >
-      <Grid item xs={12}>
+      <Grid item xs={12} sx={{ marginTop: "20px" }}>
         <Typography component={"h1"} sx={{ color: "#000000" }}>
           UserForm
         </Typography>
       </Grid>
-      <Grid item xs={12} sm={6} sx={{ display: "flex"}}>
+      <Grid item xs={12} sm={6} sx={{ display: "flex" }}>
         <Typography 
             component={'label'}
             htmlFor="id" 
             sx={{ color: "#000000", 
                   marginRight: "20px",
-                  fontzize: "40px",
+                  fontSize: "20px",
                   width: "100px",
                   display: "block" 
                 }}>
@@ -33,18 +38,18 @@ const UserForm = (props) => {
             id="id"
             name="id"
             sx={{ width: "400px" }}
-            value={''}
-            onAbort={ e => {}}
+            value={id}
+            onChange={ e => {setId(e.target.value)} }
         />
       </Grid>
 
       <Grid item xs={12} sm={6} sx={{ display: "flex"}}>
         <Typography 
             component={'label'}
-            htmlFor="id" 
+            htmlFor="name" 
             sx={{ color: "#000000", 
                   marginRight: "20px",
-                  fontzize: "20px",
+                  fontSize: "20px",
                   width: "100px",
                   display: "block" 
                 }}>
@@ -55,17 +60,17 @@ const UserForm = (props) => {
             id="name"
             name="name"
             sx={{ width: "400px" }}
-            value={''}
-            onAbort={ e => {}}
+            value={name}
+            onChange={ e => {setName(e.target.value)} }
         />
       </Grid>
       <Button 
         sx={{
             margin:'auto',
-            marginbottom: "20px",
+            marginBottom: "20px",
             backgroundColor: "#00c6e6",
             color: "#000000",
-            marginleft:'15px',
+            marginLeft:'15px',
             marginTop:'20px',
             '&:hover': { 
                         opacity:'0.7',
