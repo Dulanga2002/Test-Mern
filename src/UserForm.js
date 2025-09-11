@@ -78,7 +78,7 @@ const UserForm = (props) => {
 
                     }
         }}
-      >Submit</Button>
+      >Add</Button>
     </Grid>
   );
 };
