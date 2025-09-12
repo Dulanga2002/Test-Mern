@@ -6,10 +6,10 @@ return (
 <TableContainer component={'paper'}>
 
     <Table>
-        <TableHead>
-            <TableCell>ID</TableCell>
-            <TableCell>Name</TableCell>
-            <TableCell>Action</TableCell>
+        <TableHead sx={{ backgroundColor: "#f8f9fa" }}>
+            <TableCell sx={{ fontWeight: "bold", color: "#495057", fontSize: "16px", padding: "16px" }}>ID</TableCell>
+            <TableCell sx={{ fontWeight: "bold", color: "#495057", fontSize: "16px", padding: "16px" }}>Name</TableCell>
+            <TableCell sx={{ fontWeight: "bold", color: "#495057", fontSize: "16px", padding: "16px" }}>Action</TableCell>
         </TableHead>
         <TableBody>
             {
