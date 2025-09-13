@@ -1,5 +1,6 @@
 const User = require("./model");
 
+//get
 const getUsers = (req, res, next) => {
   User.find()
     .then((response) => {
