@@ -82,13 +82,13 @@ const UserForm = ({addUser,submited,isedit,updateUsers,data}) => {
         sx={{
             margin:'auto',
             marginBottom: "20px",
-            backgroundColor: "#00c6e6",
+            backgroundColor: "#36b64eff",
             color: "#000000",
             marginLeft:'15px',
             marginTop:'20px',
             '&:hover': { 
                         opacity:'0.7',
-                        backgroundColor: "#00c6e6" 
+                        backgroundColor: "#21c671ff" 
 
                     }
         }}
