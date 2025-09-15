@@ -47,6 +47,7 @@ const Users = () => {
         axios.put('http://localhost:3001/api/updateuser', payload)
         .then( () => {
            getUsers();
+            alert("User updated successfully!");
            setSubmited(false);
            setIsedit(false);
 
@@ -92,7 +93,7 @@ return (
                 setSelectedUser(data);
                 setIsedit(true);
              }}
-             deleteUsers = {data =>window.confirm("Are you sure to delete this user?") && deleteUsers(data)}
+             deleteUsers = {data =>window.confirm("Are you sure to delete?") && deleteUsers(data)}
         
         />
     </Box>
